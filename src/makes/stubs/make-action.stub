@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Contracts\Action;
+
+final class {{ class }} extends Action
+{
+  /**
+   *
+   */
+  public static function run() : array
+  {
+    return [];
+  }
+}

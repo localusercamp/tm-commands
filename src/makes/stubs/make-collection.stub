@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Contracts\CustomCollection;
+
+class {{ class }} extends CustomCollection
+{
+  //
+}

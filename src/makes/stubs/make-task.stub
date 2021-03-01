@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Contracts\Task;
+
+final class {{ class }} extends Task
+{
+  /**
+   *
+   */
+  public static function run()
+  {
+    //
+  }
+}
