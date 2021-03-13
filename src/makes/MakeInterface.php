@@ -20,7 +20,7 @@ class MakeInterface extends GeneratorCommand
 	 */
   protected function getStub() : string
   {
-    return __DIR__ . '/stubs/make-interface.stub';
+    return __DIR__ . '/Stubs/make-interface.stub';
   }
 
   /**

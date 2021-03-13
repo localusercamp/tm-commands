@@ -20,7 +20,7 @@ class MakeContract extends GeneratorCommand
 	 */
   protected function getStub() : string
   {
-    return __DIR__ . '/stubs/make-contract.stub';
+    return __DIR__ . '/Stubs/make-contract.stub';
   }
 
   /**

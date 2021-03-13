@@ -20,7 +20,7 @@ class MakeEntity extends GeneratorCommand
 	 */
   protected function getStub() : string
   {
-    return __DIR__ . '/stubs/make-entity.stub';
+    return __DIR__ . '/Stubs/make-entity.stub';
   }
 
   /**

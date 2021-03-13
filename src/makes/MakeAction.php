@@ -20,7 +20,7 @@ class MakeAction extends GeneratorCommand
 	 */
   protected function getStub() : string
   {
-    return __DIR__ . '/stubs/make-action.stub';
+    return __DIR__ . '/Stubs/make-action.stub';
   }
 
   /**

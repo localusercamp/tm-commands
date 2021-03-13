@@ -22,7 +22,7 @@ class MakeBuilder extends GeneratorCommand
 	 */
   protected function getStub() : string
   {
-    return __DIR__ . '/stubs/make-builder.stub';
+    return __DIR__ . '/Stubs/make-builder.stub';
   }
 
   /**
@@ -83,7 +83,7 @@ class MakeBuilder extends GeneratorCommand
       }
       else {
         $search  = '}';
-        $stub    = file_get_contents(__DIR__ . "{$ds}stubs{$ds}builder-model-bind.stub");
+        $stub    = file_get_contents(__DIR__ . "{$ds}Stubs{$ds}builder-model-bind.stub");
         $insert  = str_replace(['{{ class }}', '{{class}}'], $name, $stub);
         $replace = "\n{$insert}\n{$search}";
         file_put_contents($file_path, Str::replaceLast($search, $replace, file_get_contents($file_path)));

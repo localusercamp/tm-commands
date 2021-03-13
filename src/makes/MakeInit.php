@@ -11,11 +11,11 @@ class MakeInit extends GeneratorCommand
 
 	protected $description = 'Generates initial namespaces, folders, classes and interfaces.';
 
-	protected $init_stubs_folder = __DIR__ . DIRECTORY_SEPARATOR . 'stubs' . DIRECTORY_SEPARATOR . 'init';
+	protected $init_stubs_folder = __DIR__ . DIRECTORY_SEPARATOR . 'Stubs' . DIRECTORY_SEPARATOR . 'Init';
 
 	protected $namespaces = [
-    'contracts'  => 'App\\Contracts',
-    'interfaces' => 'App\\Interfaces',
+    'Contracts'  => 'App\\Contracts',
+    'Interfaces' => 'App\\Interfaces',
   ];
 
   protected function getStub() {}
