@@ -2,8 +2,10 @@
     "name": "thread-media/commands",
     "description": "Laravel 8 artisan commands package.",
     "keywords": [
-        "thread-media/commands",
-        "localusercamp/tm-commands"
+        "thread-media",
+        "commands",
+        "tm-commands",
+        "localusercamp"
     ],
     "type": "artisan-commands",
     "license": "MIT",
