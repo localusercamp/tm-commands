@@ -4,6 +4,9 @@ namespace {{ namespace }};
 
 use {{ rootNamespace }}Contracts\Task;
 
+/**
+  *
+  */
 final class {{ class }} extends Task
 {
   /**

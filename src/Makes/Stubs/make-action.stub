@@ -4,6 +4,9 @@ namespace {{ namespace }};
 
 use {{ rootNamespace }}Contracts\Action;
 
+/**
+  *
+  */
 final class {{ class }} extends Action
 {
   /**
