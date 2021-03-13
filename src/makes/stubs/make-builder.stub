@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Contracts\CustomBuilder;
+
+class {{ class }} extends CustomBuilder
+{
+  //
+}
