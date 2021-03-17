@@ -7,34 +7,34 @@ use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeBuilder extends GeneratorCommand
+class MakeQueryBuilder extends GeneratorCommand
 {
-  protected $name = 'make:builder';
+  protected $name = 'make:query-builder';
 
-  protected $type = 'Builder';
+  protected $type = 'QueryBuilder';
 
-	protected $description = 'Creates a new builder';
+  protected $description = 'Creates a new query builder';
 
   /**
-	 * Get the stub file for the generator.
-	 *
-	 * @return string
-	 */
-  protected function getStub() : string
+   * Get the stub file for the generator.
+   *
+   * @return string
+   */
+  protected function getStub(): string
   {
-    return __DIR__ . '/Stubs/make-builder.stub';
+    return __DIR__ . '/Stubs/make-query-builder.stub';
   }
 
   /**
-	 * Get the default namespace for the class.
-	 *
-	 * @param  string  $rootNamespace
-	 * @return string
-	 */
-	protected function getDefaultNamespace($rootNamespace)
-	{
-		return $rootNamespace . '\Builders';
-	}
+   * Get the default namespace for the class.
+   *
+   * @param  string  $rootNamespace
+   * @return string
+   */
+  protected function getDefaultNamespace($rootNamespace)
+  {
+    return $rootNamespace . '\QueryBuilders';
+  }
 
   /**
    * Get the console command arguments.
@@ -44,7 +44,7 @@ class MakeBuilder extends GeneratorCommand
   protected function getArguments()
   {
     return [
-      ['name', InputArgument::REQUIRED, 'The name of the builder.'],
+      ['name', InputArgument::REQUIRED, 'The name of the query builder.'],
     ];
   }
 
@@ -80,10 +80,9 @@ class MakeBuilder extends GeneratorCommand
 
       if ($new_eloquent_builder_exists) {
         $this->warn(' The newEloquentBuilder method already exists.');
-      }
-      else {
+      } else {
         $search  = '}';
-        $stub    = file_get_contents(__DIR__ . "{$ds}Stubs{$ds}builder-model-bind.stub");
+        $stub    = file_get_contents(__DIR__ . "{$ds}Stubs{$ds}query-builder-model-bind.stub");
         $insert  = str_replace(['{{ class }}', '{{class}}'], $name, $stub);
         $replace = "\n{$insert}\n{$search}";
         file_put_contents($file_path, Str::replaceLast($search, $replace, file_get_contents($file_path)));
@@ -94,8 +93,7 @@ class MakeBuilder extends GeneratorCommand
         $replace   = "{$search}\n\n{$insert}";
         file_put_contents($file_path, Str::replaceLast($search, $replace, file_get_contents($file_path)));
       }
-    }
-    else {
+    } else {
       $this->error(" model $model not found!");
     }
     return parent::handle();

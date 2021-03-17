@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Contracts\CustomQueryBuilder;
+
+class {{ class }} extends CustomQueryBuilder
+{
+  //
+}

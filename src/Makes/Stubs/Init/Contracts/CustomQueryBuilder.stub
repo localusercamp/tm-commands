@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Contracts;
+
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+
+use App\Interfaces\ICustomQueryBuilder;
+
+abstract class CustomQueryBuilder extends EloquentBuilder implements ICustomQueryBuilder
+{
+
+}
