@@ -2,7 +2,7 @@
 
 namespace App\Interfaces;
 
-interface ICustomBuilder
+interface ICustomQueryBuilder
 {
 
 }
