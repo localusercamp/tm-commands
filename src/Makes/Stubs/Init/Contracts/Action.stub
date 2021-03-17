@@ -6,5 +6,6 @@ use App\Interfaces\IAction;
 
 abstract class Action implements IAction
 {
-
+  # Блокировка инстанцирования
+  final private function __construct() {}
 }
