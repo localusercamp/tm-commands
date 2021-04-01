@@ -3,9 +3,25 @@
 namespace App\Contracts;
 
 use App\Interfaces\IAction;
+use App\Models\User;
 
 abstract class Action implements IAction
 {
-  # Блокировка инстанцирования
-  final private function __construct() {}
+  /**
+   * Пользователь, который вызвал этот Action
+   */
+  protected ?User $user;
+
+  final public function __construct() 
+  {
+    $this->user = $this->authorize();
+  }
+
+  /**
+   * Проверяет, есть ли у пользователя доступ к этому Action
+   */
+  public function authorize(): ?User
+  {
+    return null;
+  }
 }

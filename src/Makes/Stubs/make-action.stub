@@ -3,16 +3,22 @@
 namespace {{ namespace }};
 
 use {{ rootNamespace }}Contracts\Action;
+use App\Models\User;
 
 /**
  *
  */
 final class {{ class }} extends Action
 {
+  public function authorize(): ?User
+  {
+    //
+  }
+
   /**
    *
    */
-  public static function run() : array
+  public function run() : array
   {
     return [];
   }
